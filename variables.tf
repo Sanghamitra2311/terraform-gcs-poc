@@ -1,19 +1,3 @@
-# --- Variables automatically injected by root terragrunt.hcl ---
-variable "org_id" {
-  description = "Organization ID passed from root"
-  type        = string
-}
-
-variable "billing_account" {
-  description = "Billing Account ID passed from root"
-  type        = string
-}
-
-variable "region" {
-  description = "Default region passed from root"
-  type        = string
-}
-
 # --- Module-specific variables ---
 variable "project_id" {
   description = "The GCP project ID where the buckets will be created"
