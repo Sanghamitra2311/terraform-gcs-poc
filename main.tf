@@ -5,7 +5,7 @@ resource "google_storage_bucket" "buckets" {
   project       = var.project_id
   
   # Uses specific location if provided, otherwise defaults to root Terragrunt region
-  location      = coalesce(each.value.location, var.region)
+  location      = each.value.location
   storage_class = each.value.storage_class
 
   # ---------------------------------------------------------------------

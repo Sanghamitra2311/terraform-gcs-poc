@@ -1,19 +1,3 @@
-# --- Variables automatically injected by root terragrunt.hcl ---
-variable "org_id" {
-  description = "Organization ID passed from root"
-  type        = string
-}
-
-variable "billing_account" {
-  description = "Billing Account ID passed from root"
-  type        = string
-}
-
-variable "region" {
-  description = "Default region passed from root"
-  type        = string
-}
-
 # --- Module-specific variables ---
 variable "project_id" {
   description = "The GCP project ID where the buckets will be created"
@@ -29,7 +13,7 @@ variable "common_labels" {
 variable "buckets" {
   description = "Map of GCS buckets to create with their specific configurations."
   type = map(object({
-    location      = optional(string) # Fallback to var.region if omitted
+    location      = optional(string, "asia-south1") # Fallback to var.region if omitted
     storage_class = optional(string, "STANDARD")
     versioning    = optional(bool, true)
     labels        = optional(map(string), {})
