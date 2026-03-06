@@ -14,6 +14,18 @@ A lightweight, loopable Terraform module to provision and manage multiple Google
 ## ⚠️ Important Note on Deletion
 This module hardcodes `lifecycle { prevent_destroy = true }` on the GCS bucket resource. If you intentionally need to destroy a bucket via Terragrunt, you must temporarily comment out this block in the module source code first.
 
+## Screenshot 
+Buckets created via Terraform 
+<img width="1911" height="985" alt="image" src="https://github.com/user-attachments/assets/60bf5fff-c0e9-48c3-bdeb-d51462fa16c8" />
+
+<img width="1919" height="402" alt="image" src="https://github.com/user-attachments/assets/2ef1bbdd-2b70-4629-ac34-c910bc1a6b3a" />
+<img width="1666" height="442" alt="image" src="https://github.com/user-attachments/assets/b4df8a3c-c462-4048-a7d4-927bc65b8ac9" />
+<img width="1911" height="1009" alt="image" src="https://github.com/user-attachments/assets/8d48d5f3-186e-4909-8648-f8c04da3e875" />
+<img width="1908" height="1012" alt="image" src="https://github.com/user-attachments/assets/8e650b42-c6a4-47d1-8263-5828853a47ce" />
+
+
+
+
 ## 💻 Example Usage (Terragrunt)
 
 Create a `terragrunt.hcl` file in your component directory and pass the required inputs. 
